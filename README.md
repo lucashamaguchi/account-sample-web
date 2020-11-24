@@ -1,5 +1,12 @@
 # todos-sample-web
 
+## Check out the live examples:
+ - [Todo Web with auth](https://account.hamaguchi.site) ([Backend Auth](https://account.api.hamaguchi.site/documentation), [Backend Todo](https://xhelpers-todo-sample-api.hamaguchi.site/documentation))
+
+## Check out the backend source:
+  - [Backend Auth](https://github.com/lucashamaguchi/xhelpers-account-sample)
+  - [Backend Todo](https://github.com/lucashamaguchi/xhelpers-todo-sample)
+
 ## Project setup
 ```
 yarn install
