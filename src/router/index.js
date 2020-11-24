@@ -8,7 +8,7 @@ const SignUp = () => import(/* webpackChunkName: "public" */ "@/views/Auth/SignU
 const SSOCallback = () => import(/* webpackChunkName: "public" */ "@/views/Auth/SSOCallback");
 const AppHome = () => import(/* webpackChunkName: "private" */ "@/views/App/Home");
 const Private = () => import(/* webpackChunkName: "private" */ "@/views/Private");
-
+const AppTodo = () => import(/* webpackChunkName: "private" */ "@/views/App/Todo");
 Vue.use(Router);
 
 const router = new Router({
@@ -56,6 +56,11 @@ const router = new Router({
                     name: "App Home",
                     component: AppHome
                 },
+                {
+                    path: "/app/todo",
+                    name: "App Todo",
+                    component: AppTodo
+                },
             ]
         },
     ]
@@ -67,6 +72,11 @@ export const menuEntries = [
         "label": "Home",
         "path": "/app/home",
         "icon": "home",
+    },
+    {
+        "label": "Todo",
+        "path": "/app/todo",
+        "icon": "check",
     },
 ]
 
