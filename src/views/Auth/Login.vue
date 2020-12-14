@@ -116,8 +116,8 @@ export default {
     },
     data() {
         const model = {
-            email: "hamaguchi.lucas@gmail.com",
-            password: "jackpot123"
+            email: "",
+            password: ""
         };
         // form validate rules
         const rules = {

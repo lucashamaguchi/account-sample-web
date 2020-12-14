@@ -134,10 +134,10 @@ export default {
     },
     data() {
         const model = {
-            name: "Lucas",
-            email: "hamaguchi.lucas@gmail.com",
-            password: "jackpot123",
-            confirmPassword: "jackpot123"
+            name: "",
+            email: "",
+            password: "",
+            confirmPassword: ""
         };
         // form validate rules
         const rules = {
