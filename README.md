@@ -1,7 +1,7 @@
 # todos-sample-web
 
 ## Check out the live examples:
- - [Todo Web with auth](https://account.hamaguchi.site) ([Backend Auth](https://account.api.hamaguchi.site/documentation), [Backend Todo](https://xhelpers-todo-sample-api.hamaguchi.site/documentation))
+ - [Todo Web with auth](https://account.vue.hamaguchi.com.br) ([Backend](https://api.todo.hamaguchi.com.br/documentation#))
 
 ## Check out the backend source:
   - [Backend Auth](https://github.com/lucashamaguchi/xhelpers-account-sample)
