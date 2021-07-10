@@ -9,6 +9,7 @@ const SSOCallback = () => import(/* webpackChunkName: "public" */ "@/views/Auth/
 const AppHome = () => import(/* webpackChunkName: "private" */ "@/views/App/Home");
 const Private = () => import(/* webpackChunkName: "private" */ "@/views/Private");
 const AppTodo = () => import(/* webpackChunkName: "private" */ "@/views/App/Todo");
+const VideoPlayer = () => import(/* webpackChunkName: "private" */ "@/views/App/Videos/Player");
 Vue.use(Router);
 
 const router = new Router({
@@ -52,14 +53,26 @@ const router = new Router({
             component: Private,
             children: [
                 {
-                    path: "/app/home",
+                    path: "home",
                     name: "App Home",
                     component: AppHome
                 },
                 {
-                    path: "/app/todo",
+                    path: "todo",
                     name: "App Todo",
                     component: AppTodo
+                },
+                {
+                    path: "videos",
+                    name: "App Videos",
+                    component: VideoPlayer,
+                    children: [
+                        {
+                            path: "player",
+                            name: "App Video Player",
+                            component: VideoPlayer,
+                        }
+                    ]
                 },
             ]
         },
@@ -77,6 +90,19 @@ export const menuEntries = [
         "label": "Todo",
         "path": "/app/todo",
         "icon": "check",
+    },
+    {
+        "label": "Videos",
+        "path": "/app/todo",
+        "icon": "movie",
+        "isGroup": true,
+        "children": [
+            {
+                "label": "Player",
+                "path": "/app/videos/player",
+                "icon": "play_arrow",
+            }
+        ]
     },
 ]
 
