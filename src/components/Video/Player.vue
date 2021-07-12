@@ -9,10 +9,11 @@
               :src="videoUrl"
               type="video/mp4">
             <track
+              v-if="captionUrl"
               label="English"
               kind="captions"
               srcLang="en"
-              :src="`${videoUrl}/caption`"
+              :src="captionUrl"
               default>
         </video>
     </div>
@@ -23,6 +24,11 @@ export default {
         videoUrl: {
             type: String,
             required: true
+        },
+        captionUrl: {
+            type: String,
+            required: false,
+            default: ""
         }
     },
     data() {

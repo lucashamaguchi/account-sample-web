@@ -1,7 +1,9 @@
 <template>
   <div>
     fala ai player
-    <video-player :video-url="videoUrl" />
+    <video-player
+      :video-url="videoUrl"
+      :caption-url="captionUrl" />
   </div>
 </template>
 
@@ -13,7 +15,8 @@ export default {
     },
     data() {
         return {
-            videoUrl: `${process.env.VUE_APP_VIDEOS_API_REST}/videos/soul`
+            videoUrl: `${process.env.VUE_APP_VIDEOS_API_REST}/videos/soul/stream`,
+            captionUrl: `${process.env.VUE_APP_VIDEOS_API_REST}/videos/soul/caption`
         }
     },
     // mounted(){
