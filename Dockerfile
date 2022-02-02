@@ -2,7 +2,6 @@ FROM node:14.1-alpine AS builder
 
 ARG ENV
 
-RUN echo ${ENV}
 
 WORKDIR /app
 COPY . ./
