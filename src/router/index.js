@@ -9,7 +9,9 @@ const SSOCallback = () => import(/* webpackChunkName: "public" */ "@/views/Auth/
 const AppHome = () => import(/* webpackChunkName: "private" */ "@/views/App/Home");
 const Private = () => import(/* webpackChunkName: "private" */ "@/views/Private");
 const AppTodo = () => import(/* webpackChunkName: "private" */ "@/views/App/Todo");
+const AppVideos = () => import(/* webpackChunkName: "private" */ "@/views/App/Videos/Index");
 const VideoPlayer = () => import(/* webpackChunkName: "private" */ "@/views/App/Videos/Player");
+const MyVideos = () => import(/* webpackChunkName: "private" */ "@/views/App/Videos/MyVideos");
 Vue.use(Router);
 
 const router = new Router({
@@ -65,12 +67,18 @@ const router = new Router({
                 {
                     path: "videos",
                     name: "App Videos",
-                    component: VideoPlayer,
+                    component: AppVideos,
                     children: [
                         {
                             path: "player",
                             name: "App Video Player",
                             component: VideoPlayer,
+                        },
+
+                        {
+                            path: "myvideos",
+                            name: "App My Videos",
+                            component: MyVideos,
                         }
                     ]
                 },
@@ -93,7 +101,7 @@ export const menuEntries = [
     },
     {
         "label": "Videos",
-        "path": "/app/todo",
+        "path": "/app/videos",
         "icon": "movie",
         "isGroup": true,
         "children": [
@@ -101,6 +109,11 @@ export const menuEntries = [
                 "label": "Player",
                 "path": "/app/videos/player",
                 "icon": "play_arrow",
+            },
+            {
+                "label": "My Videos",
+                "path": "/app/videos/myvideos",
+                "icon": "movie",
             }
         ]
     },

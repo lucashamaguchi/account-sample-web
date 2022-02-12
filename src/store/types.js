@@ -13,3 +13,9 @@ export const AUTH_REQUEST_FORGOT_PASSWORD = "auth/AUTH_REQUEST_FORGOT_PASSWORD";
 export const AUTH_LOGOUT = "auth/AUTH_LOGOUT";
 export const AUTH_GOOGLE_LOGIN = "auth/AUTH_GOOGLE_LOGIN";
 export const AUTH_FACEBOOK_LOGIN = "auth/AUTH_FACEBOOK_LOGIN";
+
+
+export const VIDEOS_CREATE = "videos/VIDEOS_CREATE";
+export const VIDEOS_UPDATE = "videos/VIDEOS_UPDATE";
+export const VIDEOS_DELETE = "videos/VIDEOS_DELETE";
+export const VIDEOS_LIST = "videos/VIDEOS_LIST";
