@@ -9,7 +9,7 @@ Vue.use(Vuex);
 const cookieKey = "HAMA_" + process.env.NODE_ENV;
 const isDev = process.env.NODE_ENV === "development";
 const cookieOptions = {
-    domain: isDev ? ".hamaguchi.local" : ".hamaguchi.site",
+    domain: isDev ? ".hamaguchi.local" : ".hamaguchi.com.br",
     expires: 3,
     secure: !isDev,
     SameSite: 'strict'
