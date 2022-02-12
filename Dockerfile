@@ -8,6 +8,7 @@ COPY . ./
 
 ENV PATH="./node_modules/.bin:$PATH"
 
+ENV NODE_ENV=${ENV}
 RUN yarn && yarn build --mode $ENV
 
 FROM nginx:1.17-alpine
